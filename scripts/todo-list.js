@@ -19,13 +19,12 @@ function renderTodoList() {
     const { name, dueDate} = todoObject; // this is called destructuring
 
     const html = `
-      <p>
-      ${name} ${dueDate}  
+      <div>${name}</div>
+      <div>${dueDate}</div>  
       <button onclick="
         todoList.splice(${i}, 1);
         renderTodoList();
-      ">Delete</button>
-      </p>
+      " class="delete-todo-button">Delete</button>
     `;
 
     todoListHTML += html;
